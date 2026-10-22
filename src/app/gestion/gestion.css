@@ -1,0 +1,61 @@
+:host {
+  flex: 1;
+  display: flex;
+}
+
+.carte {
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--ombre);
+  overflow: hidden;
+}
+
+.carte h2 {
+  margin: 0;
+  padding: 16px 24px;
+  background: var(--primary);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.ligne {
+  display: flex;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eef0f6;
+}
+
+.ligne:last-child {
+  border-bottom: none;
+}
+
+.nom {
+  width: 120px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.valeur {
+  flex: 1;
+  word-break: break-word;
+}
+
+.introuvable {
+  margin: auto;
+  text-align: center;
+}
+
+.introuvable h1 {
+  margin: 0;
+  font-size: 7rem;
+  color: var(--primary);
+}
+
+.introuvable p {
+  font-size: 1.2rem;
+  color: #6b7280;
+}

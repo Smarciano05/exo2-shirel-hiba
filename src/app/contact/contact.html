@@ -1,0 +1,61 @@
+<div class="page">
+  <form [formGroup]="formulaire" (ngSubmit)="envoyer()">
+    <h2>✉️ Contactez-nous</h2>
+
+    <div class="champ">
+      <label for="prenom">Prénom *</label>
+      <input id="prenom" type="text" formControlName="prenom"
+             [class.invalide]="invalide('prenom')" />
+      @if (invalide('prenom')) {
+      <small class="erreur">Le prénom est requis.</small>
+      }
+    </div>
+
+    <div class="champ">
+      <label for="nom">Nom *</label>
+      <input id="nom" type="text" formControlName="nom"
+             [class.invalide]="invalide('nom')" />
+      @if (invalide('nom')) {
+      <small class="erreur">Le nom est requis.</small>
+      }
+    </div>
+
+    <div class="champ">
+      <label for="age">Âge</label>
+      <input id="age" type="number" formControlName="age" />
+    </div>
+
+    <div class="case">
+      <input id="hide" type="checkbox" formControlName="hide" />
+      <label for="hide">Hide (cacher l'email)</label>
+    </div>
+
+    @if (!formulaire.controls.hide.value) {
+    <div class="champ">
+      <label for="email">Email *</label>
+      <input id="email" type="text" formControlName="email"
+             [class.invalide]="invalide('email')" />
+      @if (invalide('email')) {
+      <small class="erreur">
+        @if (formulaire.controls.email.hasError('required')) {
+        L'email est requis.
+        } @else {
+        L'email doit contenir un @.
+        }
+      </small>
+      }
+    </div>
+    }
+
+    <div class="champ">
+      <label for="commentaire">Commentaire *</label>
+      <textarea id="commentaire" rows="4" formControlName="commentaire"
+                [class.invalide]="invalide('commentaire')"></textarea>
+      @if (invalide('commentaire')) {
+      <small class="erreur">Le commentaire est requis.</small>
+      }
+    </div>
+
+    <button type="submit" [disabled]="formulaire.invalid">Envoyer</button>
+  </form>
+</div>

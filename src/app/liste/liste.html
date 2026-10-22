@@ -1,0 +1,23 @@
+<div class="page">
+  <h2>🎞️ Mes films préférés</h2>
+
+  <div class="liste">
+    @for (film of films; track film.titre) {
+    <a class="film"
+       role="button"
+       tabindex="0"
+       [class.actif]="film === filmChoisi"
+       (click)="choisir(film)"
+       (keydown.enter)="choisir(film)">
+      {{ film.titre }}
+    </a>
+    }
+  </div>
+
+  @if (filmChoisi; as film) {
+  <div class="detail">
+    <h3>{{ film.titre }}</h3>
+    <img [src]="film.affiche" [alt]="film.titre" class="affiche" />
+  </div>
+  }
+</div>

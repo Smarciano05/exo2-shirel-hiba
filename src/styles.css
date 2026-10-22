@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --dark: #1e1b4b;
+  --fond: #f4f6fb;
+  --texte: #1f2937;
+  --bord: #d1d5db;
+  --erreur: #dc2626;
+  --ombre: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 16px;
+}

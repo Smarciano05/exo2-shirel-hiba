@@ -1,0 +1,50 @@
+.page {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.film {
+  display: block;
+  padding: 14px 18px;
+  background: white;
+  border: 1px solid var(--bord);
+  border-radius: 10px;
+  color: var(--texte);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.film:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--ombre);
+}
+
+.film.actif {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.detail {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: var(--ombre);
+}
+
+.affiche {
+  max-width: 100%;
+  max-height: 480px;
+  border-radius: 10px;
+}

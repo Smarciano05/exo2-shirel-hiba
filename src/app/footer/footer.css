@@ -1,0 +1,24 @@
+.pied {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px;
+  background: var(--dark);
+  color: #c7d2fe;
+  font-size: 0.9rem;
+}
+
+.bouton-contact {
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.bouton-contact:hover {
+  background: var(--primary-dark);
+}

@@ -1,0 +1,31 @@
+@if (store.dernierContact; as contact) {
+<div class="carte">
+  <h2>📋 Dernier formulaire envoyé</h2>
+
+  <div class="ligne">
+    <span class="nom">Prénom</span>
+    <span class="valeur">{{ contact.prenom }}</span>
+  </div>
+  <div class="ligne">
+    <span class="nom">Nom</span>
+    <span class="valeur">{{ contact.nom }}</span>
+  </div>
+  <div class="ligne">
+    <span class="nom">Âge</span>
+    <span class="valeur">{{ contact.age ?? 'Non renseigné' }}</span>
+  </div>
+  <div class="ligne">
+    <span class="nom">Email</span>
+    <span class="valeur">{{ contact.email || 'Caché' }}</span>
+  </div>
+  <div class="ligne">
+    <span class="nom">Commentaire</span>
+    <span class="valeur">{{ contact.commentaire }}</span>
+  </div>
+</div>
+} @else {
+<div class="introuvable">
+  <h1>404</h1>
+  <p>Not found : aucun formulaire n'a été envoyé.</p>
+</div>
+}
